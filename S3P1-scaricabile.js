@@ -55,7 +55,6 @@ function upperFirst (string) {
 }
 
 let stringUpper = upperFirst("vanessa") 
-console.log(stringUpper + " ciao");
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
@@ -68,21 +67,39 @@ console.log(stringUpper + " ciao");
  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function area (l1,l2) {
+    let area = l1*l2;
+    return area
+}
+
+let areaTot = area(3,3)
+console.log("L'area del tuo quadrato è di: " + areaTot)
 
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "crazyDiff" che calcola la differenza assoluta tra un numero fornito e 19.
  Se il valore calcolato è più grande di 19, la funzione deve tornare tale risultato moltiplicato per 3.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function crazyDiff (number) {
+    let sottrazione = number - 19;
+    if (sottrazione>19) {
+        sottrazione=sottrazione*3;
+    } else {
+        sottrazione=sottrazione;
+    }
+
+    return sottrazione
+}
+
+let crazyResult = crazyDiff(79)
+console.log(crazyResult)
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "code" all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code" allora deve ritornarla senza modifiche.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function codify (string) {}
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
@@ -90,7 +107,23 @@ console.log(stringUpper + " ciao");
  SUGGERIMENTO: operatore modulo
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function check3and7 (number) {
+        if (number%3===0 || number%7===0) {
+            result=true
+        } else {
+            result = false
+        }
+        return result
+}
+
+let checkNumber = check3and7(28)
+
+if (checkNumber>0) {
+    console.log("Il numero che hai inserito è multiplo di 3 o di 7? " + checkNumber)
+} else {
+    console.log("Per favore inserisci un numero positivo")
+}
+
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
