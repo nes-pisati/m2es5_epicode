@@ -3,25 +3,59 @@
  La funzione deve ritornare la somma di quei due valori, ma se il loro valore è lo stesso allora deve ritornare la loro somma moltiplicata per 3.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function crazySum (number1, number2) {
+    let sum = number1 + number2;
+    if (number1===number2) {
+        sum = sum*3;
+    }
+
+    return sum
+}
+
+let sum = crazySum(10,10)
+console.log("Il risultato è: " + sum)
 
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "boundary", che accetta un numero intero come parametro e ritorna true se tale parametro è incluso tra 20 e 100 (incluso) o se è esattamente uguale a 400.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function boundary (number) {
+if ((number>=20 && number<=100)||(number===400)) {
+    result = true;
+} else {
+    result = false;
+}
+return result
+}
+
+let resultNumber = boundary(15);
+console.log("Il risultato è: " + resultNumber)
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "reverseString", che accetta una stringa come parametro e la ritorna invertita (es.: EPICODE => EDOCIPE).
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function reverseString (string) {
+    let stringReverse = string.split("").reverse().join("");
+
+    return stringReverse;
+}
+
+let string = reverseString("Vanessa")
+console.log("La tua stringa al contrario è: " + string)
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function upperFirst (string) {
+    let stringUp = string[0].toUpperCase() + string.slice[1];
+
+    return stringUp  
+}
+
+let stringUpper = upperFirst("vanessa") 
+console.log(stringUpper + " ciao");
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
