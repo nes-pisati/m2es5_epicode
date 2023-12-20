@@ -60,7 +60,9 @@ let stringUpper = upperFirst("vanessa")
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function giveMeRandom (n) {
+    
+}
 
 //EXTRA:
 /* ESERCIZIO 1
@@ -99,7 +101,10 @@ console.log(crazyResult)
  La funzione deve aggiungere la parola "code" all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code" allora deve ritornarla senza modifiche.
 */
 
-function codify (string) {}
+function codify (string) {
+    let codString = "code" + codString
+
+}
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
@@ -129,4 +134,11 @@ if (checkNumber>0) {
  Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function cutString (string) {
+    let userText = userText.slice(0,-1);
+
+    return userText
+}
+
+let cutText = cutString("tavolo")
+console.log(cutText)
