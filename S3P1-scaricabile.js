@@ -36,14 +36,12 @@ console.log("Il risultato è: " + resultNumber)
 */
 
 function reverseString (string) {
-
-if(string.lenght===0) {
-    console.log("Per favore inserisci una stringa valida")
-}else{
+    if (string.lenght === 0){
+        return string
+    } else {
     let stringReverse = string.split("").reverse().join("");
-
-    return stringReverse;
-}}
+    return stringReverse;}
+}
 
 let string = reverseString("Vanessa")
 console.log("La tua stringa al contrario è: " + string)
@@ -55,13 +53,10 @@ console.log("La tua stringa al contrario è: " + string)
 function upperFirst (string) {
 
     if (string.lenght === 0) {
-        console.log("Per favore inserisci una stringa valida")
+        return string
     } else {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
-    //let stringUp = string[0].toUpperCase();
-
-    //return stringUp + string.slice[1]
 }
 
 let originalString = "vanessa"
@@ -162,10 +157,10 @@ if (checkNumber>0) {
 */
 
 function cutString (string) {
-    if (string.lenght>2) {
-        return string.slice(1,-1);
+    if (string.lenght<2) {
+        return string
     } else {
-        console.log("Per favore inserisci una parola che abbia più di due lettere")
+        return string.slice(1,-1);
     }
 }
 
