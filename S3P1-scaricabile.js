@@ -36,10 +36,14 @@ console.log("Il risultato è: " + resultNumber)
 */
 
 function reverseString (string) {
+
+if(string.lenght===0) {
+    console.log("Per favore inserisci una stringa valida")
+}else{
     let stringReverse = string.split("").reverse().join("");
 
     return stringReverse;
-}
+}}
 
 let string = reverseString("Vanessa")
 console.log("La tua stringa al contrario è: " + string)
@@ -49,20 +53,36 @@ console.log("La tua stringa al contrario è: " + string)
 */
 
 function upperFirst (string) {
-    let stringUp = string[0].toUpperCase() + string.slice[1];
 
-    return stringUp  
+    if (string.lenght === 0) {
+        console.log("Per favore inserisci una stringa valida")
+    } else {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    //let stringUp = string[0].toUpperCase();
+
+    //return stringUp + string.slice[1]
 }
 
-let stringUpper = upperFirst("vanessa") 
+let originalString = "vanessa"
+let stringUpper = upperFirst(originalString) 
+console.log(stringUpper)
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
 */
 
 function giveMeRandom (n) {
-    
+    let random = [];
+    for(let i=0; i<n; i++) {
+        let randomNumbers = Math.floor(Math.random()*11);
+        random.push(randomNumbers)
+    };
+    return random
 }
+
+let randomArray = giveMeRandom(7);
+console.log("I tuoi numeri casuali sono: " + randomArray);
 
 //EXTRA:
 /* ESERCIZIO 1
@@ -102,9 +122,16 @@ console.log(crazyResult)
 */
 
 function codify (string) {
-    let codString = "code" + codString
-
+    if (string.startsWith("code")) {
+        return string
+    } else {
+        return "code" + string
+    }
 }
+
+let codString = "ciao"
+let resultString = codify(codString)
+console.log(resultString)
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
@@ -135,10 +162,13 @@ if (checkNumber>0) {
 */
 
 function cutString (string) {
-    let userText = userText.slice(0,-1);
-
-    return userText
+    if (string.lenght>2) {
+        return string.slice(1,-1);
+    } else {
+        console.log("Per favore inserisci una parola che abbia più di due lettere")
+    }
 }
 
-let cutText = cutString("tavolo")
-console.log(cutText)
+let stringCut = "tavolo"
+let newString = cutString(stringCut)
+console.log(newString)
